@@ -8,6 +8,9 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "cuid": "^2.1.6",
     "email-validator": "^2.0.4",
     "mongodb": "^3.3.0"
