@@ -22,8 +22,7 @@ export default function makeBuildItem({ Id }){
             getId: ()=> id,
             getTitle: ()=> title,
             getPrice: ()=> price,
-            getDate: ()=> dateAdded
+            getDateAdded: ()=> dateAdded
         })
-
     }
 }
