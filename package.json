@@ -6,5 +6,8 @@
   "repository": "https://github.com/mohammedSlimani/money-server.git",
   "author": "Mohammed slimani <slimani.med.21@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "cuid": "^2.1.6"
+  }
 }
