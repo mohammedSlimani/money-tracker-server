@@ -2,7 +2,7 @@
 This is the Server to my money management App. 
 
 # How to run this on your local machine
-- Fork this Repository
+- Fork and clone this Repository
 - in the directory of this repository run:
 ```
 yarn install
