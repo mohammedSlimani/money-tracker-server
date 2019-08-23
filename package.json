@@ -7,6 +7,11 @@
   "author": "Mohammed slimani <slimani.med.21@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "babel-node ./db/index.js",
+    "start": "npm run db && cd src && nodemon --exec babel-node index.js"
+  },
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
@@ -15,6 +20,7 @@
     "cuid": "^2.1.6",
     "email-validator": "^2.0.4",
     "express": "^4.17.1",
-    "mongodb": "^3.3.0"
+    "mongodb": "^3.3.0",
+    "nodemon": "^1.19.1"
   }
 }
