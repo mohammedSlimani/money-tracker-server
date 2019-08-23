@@ -1,10 +1,10 @@
-export default function makeAddUserController({ addUser }){
+export default function makeAddUserController({ authUser }){
     return async function addUserController(httpRequest){
         const headers = {
             'Content-Type': 'application/json'
         }
         try {
-            const user = await addUser({name, email,facebookId } = httpRequest);
+            const user = await authUser({name, email, facebookId } = httpRequest);
             return {
                 headers,
                 statusCode: 200,
