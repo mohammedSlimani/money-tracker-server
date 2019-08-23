@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 //ROUTES
 app.post('/users', makeExpressCallback(authUserController))
 app.patch('/users', makeExpressCallback(editUserController))
-app.delete('/users', makeExpressCallback(removeUserController))
+app.delete('/users/:id', makeExpressCallback(removeUserController))
 app.post('/users/:id', makeExpressCallback(addItemController))
 app.patch('/users/:id/items/:itemId', makeExpressCallback(editItemController))
 app.delete('/users/:id/items/:itemId', makeExpressCallback(removeItemController))

@@ -17,20 +17,14 @@ export default function makeUserDb({ makeDb }) {
 
     async function findById({ id: _id }) {
         const db = await makeDb();
-        const result = await db.collection('users').find({ _id });
-        if (result.length === 0) {
-            return null;
-        }
-        return result[0];
+        const result = await db.collection('users').findOne({ _id });
+        return result;
     }
 
     async function findByEmail({ email }) {
         const db = await makeDb();
-        const result = await db.collection('users').find({ email });
-        if (result.length === 0) {
-            return null;
-        }
-        return result[0];
+        const result = await db.collection('users').findOne({ email });
+        return result;
     }
 
     async function insert({ id: _id, ...userInfo }) {
