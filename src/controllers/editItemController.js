@@ -5,8 +5,8 @@ export default function makeEditItemController(editItem){
         }
         try {
             const { title, price } = httpRequest.body;
-            const id = httpRequest.params.id;
-            const user = await editItem({ id, item: { title, price } } );
+            const {id, itemId}= httpRequest.params;
+            const user = await editItem({ id, item: { id:itemId, title, price } } );
             return {
                 headers,
                 statusCode: 200,
