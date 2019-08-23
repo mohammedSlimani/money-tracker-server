@@ -11,8 +11,10 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "body-parser": "^1.19.0",
     "cuid": "^2.1.6",
     "email-validator": "^2.0.4",
+    "express": "^4.17.1",
     "mongodb": "^3.3.0"
   }
 }
