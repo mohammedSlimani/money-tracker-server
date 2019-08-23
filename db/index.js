@@ -7,7 +7,7 @@ import { makeDb } from "../src/data-access"
     const userResult = await db
         .collection('users')
         .createIndexes([
-            { key: { email, facebookId }, unique: true }
+            { key: { email: 1, facebookId: 1 }, unique: true }
         ])
     console.log(userResult)
     console.log('Database setup complete...')

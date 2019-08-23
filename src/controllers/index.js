@@ -21,7 +21,7 @@ const removeItemController = makeRemoveItemController({removeItem});
 const editUserController = makeEditUserController({editUser});
 const removeUserController = makeRemoveUserController({removeUser});
 
-export default userControllers = Object.freeze({
+const userControllers = Object.freeze({
     addItemController,
     authUserController,
     editItemController,
@@ -29,6 +29,8 @@ export default userControllers = Object.freeze({
     removeItemController,
     removeUserController
 })
+
+export default userControllers;
 
 export {
     addItemController,
