@@ -1,5 +1,5 @@
 export default function makeBuildUser({ Id, validator, makeItem }) {
-    return async function makeBuildUser({
+    return function makeBuildUser({
         id = Id.makeId(),
         name,
         facebookId,
