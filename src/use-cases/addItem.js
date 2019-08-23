@@ -9,7 +9,7 @@ export default function makeAddItem({ usersDb }){
             throw new Error('user to add item to doesnt exist')
         }
         const mUser = makeUser(user);
-        mUser.addItem(item);
-        return usersDb.update(mUser);
+        mUser.addItem(mItem);
+        return await usersDb.update(mUser);
     }
 }
