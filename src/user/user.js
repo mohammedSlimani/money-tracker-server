@@ -6,7 +6,7 @@ export default function makeBuildUser({ Id, validator, makeItem }) {
         email,
         items = []
     }) {
-        if (!id.isValidId()) {
+        if (!Id.isValidId(id)) {
             throw new Error('User should have a valid id')
         }
         if (!name) {

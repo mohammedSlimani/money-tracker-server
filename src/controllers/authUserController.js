@@ -4,7 +4,8 @@ export default function makeAuthUserController({ authUser }){
             'Content-Type': 'application/json'
         }
         try {
-            const user = await authUser({name, email, facebookId } = httpRequest);
+            const { name, email, facebookId } = httpRequest.body;
+            const user = await authUser({ name, email, facebookId });
             return {
                 headers,
                 statusCode: 200,

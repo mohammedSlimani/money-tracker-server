@@ -3,7 +3,7 @@ import makeUser from "../user";
 export default function makeAuthUser({ usersDb }) {
     return async function authUser({ name, facebookId, email } = {}) {
         const user = makeUser({ name, facebookId, email });
-        const exist = usersDb.findByEmail({ email });
+        const exist = await usersDb.findByEmail({ email });
 
         if (exist && facebookId === exist.facebookId) {
             return exist
