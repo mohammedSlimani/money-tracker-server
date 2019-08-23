@@ -26,12 +26,11 @@ export default function makeBuildUser({ Id, validator, makeItem }) {
             getFacebookId: () => facebookId,
             getItems: () => items,
             addItem: (item) => {
-                const mItem = makeItem(item);
                 items.push({
-                    id: mItem.getId(),
-                    title: mItem.getTitle(),
-                    price: mItem.getPrice(),
-                    dateAdded: mItem.getDateAdded()
+                    id: item.getId(),
+                    title: item.getTitle(),
+                    price: item.getPrice(),
+                    dateAdded: item.getDateAdded()
                 })
             }
         })

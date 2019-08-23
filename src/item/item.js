@@ -4,8 +4,8 @@ export default function makeBuildItem({ Id }) {
         title,
         price,
         dateAdded = Date.now()
-    }) {
-        if (!Id.isValidID()) {
+    }={}) {
+        if (!Id.isValidId(id)) {
             throw new Error('Item must have a valid Id')
         }
         if (!title) {
