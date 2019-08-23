@@ -1,4 +1,4 @@
-export default makeAddItemController({ addItem }){
+export default function makeAddItemController({ addItem }){
     return async function addItemController(httpRequest){
         const headers = {
             'Content-Type': 'application/json'

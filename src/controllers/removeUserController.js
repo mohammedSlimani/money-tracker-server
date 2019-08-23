@@ -1,4 +1,4 @@
-export default makeRemoveUserController({removeUser}){
+export default function makeRemoveUserController({removeUser}){
     return async function removeUserController(httpRequest){
         const headers = {
             'Content-Type': 'application/json'

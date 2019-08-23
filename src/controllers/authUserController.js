@@ -1,5 +1,5 @@
-export default function makeAddUserController({ authUser }){
-    return async function addUserController(httpRequest){
+export default function makeAuthUserController({ authUser }){
+    return async function addAuthController(httpRequest){
         const headers = {
             'Content-Type': 'application/json'
         }
