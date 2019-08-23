@@ -8,10 +8,19 @@ import {
     removeItemController,
     removeUserController
 } from './controllers'
+import makeExpressCallback from './express-callback'
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json());
+
+//ROUTES
+app.post('/users', makeExpressCallback(authUserController))
+app.patch('/users', makeExpressCallback(editUserController))
+app.delete('/users', makeExpressCallback(removeUserController))
+app.post('/users/:id', makeExpressCallback(addItemController))
+app.patch('/users/:id/items/:itemId', makeExpressCallback(editItemController))
+app.delete('/users/:id/items/:itemId', makeExpressCallback(removeItemController))
 
 app.listen(PORT,()=> console.log('Server started on port',PORT));
 
