@@ -4,6 +4,7 @@ export default function makeUserDb({ makeDb }){
     return Object.freeze({
         findAll,
         findById,
+        findByEmail,
         insert,
         remove,
         update
@@ -17,6 +18,15 @@ export default function makeUserDb({ makeDb }){
     async function findById({id: _id}){
         const db = await makeDb();
         const result = await db.collection('users').find({_id});
+        if(result.length === 0){
+            return null;
+        }
+        return result[0];
+    }
+
+    async function findByEmail({ email }){
+        const db = await makeDb();
+        const result = await db.collection('users').find({email});
         if(result.length === 0){
             return null;
         }
