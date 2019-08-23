@@ -6,7 +6,7 @@ const url = process.env.DB_URL || 'mongodb://127.0.0.1:27017';
 const dbName = process.env.DB_NAME || 'money';
 const client = new MongoClient(url, { useNewUrlParser: true });
 
-async function makeDb() {
+export async function makeDb() {
     if (!client.isConnected()) {
         await client.connect();
     }
