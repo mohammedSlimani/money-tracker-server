@@ -7,7 +7,9 @@ export default function makeUserDb({ makeDb }) {
         findByEmail,
         insert,
         remove,
-        update
+        update,
+        addItem,
+        removeItem
     })
     async function findAll() {
         const db = await makeDb();
@@ -48,5 +50,25 @@ export default function makeUserDb({ makeDb }) {
             { returnOriginal: false }
         )
         return result.value
+    }
+
+    async function addItem({ id: _id, item }) {
+        const db = await makeDb();
+        const updated = await db.collection('users').updateOne(
+            { _id },
+            { $push: { items: { ...item } } },
+            { returnOriginal: false }
+        )
+        return updated.result;
+    }
+
+    async function removeItem({userId: _id, itemId}){
+        const db = await makeDb();
+        const updated = await db.collection('users').updateOne(
+            { _id },
+            { $pull: { items : { id: itemId } } },
+            { returnOriginal: false }
+        )
+        return updated.result;
     }
 }
