@@ -1,6 +1,11 @@
 # money-server
 This is the Server to my money management App. 
 
+# OverAll Architecture of this Server
+![architecture](./architecture.png)
+
+It is pretty much an implementation of the SOLID design principles 
+
 # How to run this on your local machine
 - Fork and clone this Repository
 - in the directory of this repository run:
