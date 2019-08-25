@@ -8,10 +8,9 @@ export default function makeAddItem({ usersDb }){
         if(!user){
             throw new Error('user to add item to doesnt exist')
         }
-        const mUser = makeUser(user);
-        mUser.addItem(mItem);
-        return await usersDb.update({
-            items: mUser.getItems()
+        return await usersDb.addItem({
+            item,
+            id 
         });
     }
 }

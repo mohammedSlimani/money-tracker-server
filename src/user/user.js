@@ -24,15 +24,7 @@ export default function makeBuildUser({ Id, validator, makeItem }) {
             getName: () => name,
             getEmail: () => email,
             getFacebookId: () => facebookId,
-            getItems: () => items,
-            addItem: (item) => {
-                items.push({
-                    id: item.getId(),
-                    title: item.getTitle(),
-                    price: item.getPrice(),
-                    dateAdded: item.getDateAdded()
-                })
-            }
+            getItems: () => items
         })
     }
 }
