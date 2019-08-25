@@ -39,6 +39,7 @@ export default function makeUserDb({ makeDb }) {
         return result;
     }
 
+    //Since I can't change a whole array with this function I have to make specific ones
     async function update({ id: _id, ...changes }) {
         const db = await makeDb();
         const result = await db.collection('users').findOneAndUpdate(
