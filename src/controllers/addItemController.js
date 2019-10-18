@@ -11,10 +11,7 @@ export default function makeAddItemController({ addItem }) {
 
 			return {
 				headers,
-				statusCode: 200,
-				body: {
-					...user
-				}
+				statusCode: user.nModified > 0 ? 200 : 500
 			};
 		} catch (e) {
 			console.log(e);

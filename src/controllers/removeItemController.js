@@ -9,10 +9,7 @@ export default function makeRemoveItemController({ removeItem }) {
 			const user = await removeItem({ id, itemId });
 			return {
 				headers,
-				statusCode: 200,
-				body: {
-					...user
-				}
+				statusCode: user.nModified > 0 ? 200 : 500
 			};
 		} catch (e) {
 			console.log(e);

@@ -8,10 +8,7 @@ export default function makeRemoveUserController({ removeUser }) {
 			const user = await removeUser({ id });
 			return {
 				headers,
-				statusCode: 200,
-				body: {
-					...user
-				}
+				statusCode: user.deletedCount > 0 ? 200 : 500
 			};
 		} catch (e) {
 			console.log(e);

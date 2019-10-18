@@ -7,5 +7,7 @@ export default function makeEditItem({ usersDb }) {
 			throw new Error("Provide The item you want to edit");
 		}
 		// I dont think I need this functionality right now... how lazy I am.
+
+		throw new Error("Not Implemented Yet");
 	};
 }
