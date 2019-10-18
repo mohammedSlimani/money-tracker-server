@@ -1,4 +1,4 @@
-import makeItem from "../item";
+import { makeItem } from "../entities";
 
 export default function makeAddItem({ usersDb }){
     return async function addItem({id, item}){

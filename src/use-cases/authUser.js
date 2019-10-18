@@ -1,4 +1,4 @@
-import makeUser from "../user";
+import { makeUser } from "../entities";
 
 export default function makeAuthUser({ usersDb }) {
     return async function authUser({ name, facebookId, email } = {}) {
