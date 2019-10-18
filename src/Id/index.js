@@ -1,8 +1,8 @@
-import cuid from 'cuid'
+import cuid from "cuid";
 
 const Id = Object.freeze({
-    makeId: cuid,
-    isValidId: cuid.isCuid
-})
+	makeId: cuid,
+	isValidId: cuid.isCuid
+});
 
-export default Id
+export default Id;
